@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+
+    <!-- Embedded CSS -->
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif !important;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background: #f9f9f9;
+            flex-direction: column;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            padding: 15px 0;
+            width: 100%;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Remove bullets from list */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 5px 10px;
+            background: #fff;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            padding: 5px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .search-bar button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 50px;
+            width: 100%;
+        }
+
+        /* Portfolio Section */
+        .portfolio {
+            width: 85%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .portfolio-item h3 {
+            font-size: 20px;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .portfolio-item p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .btn-buy {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #4CAF50;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-buy:hover {
+            background: #388E3C;
+        }
+
+        /* Research Papers Section */
+        .research-papers {
+            width: 85%;
+            max-width: 1200px;
+            margin: 50px 0;
+            padding: 40px 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .research-papers h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .paper {
+            margin-bottom: 30px;
+        }
+
+        .paper h3 {
+            font-size: 24px;
+            color: #222;
+        }
+
+        .paper p {
+            font-size: 16px;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .paper .btn {
+            padding: 10px 25px;
+            background: #4CAF50;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .paper .btn:hover {
+            background: #388E3C;
+        }
+
+        /* Logo Section */
+        .logo {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            width: 85%;
+            max-width: 1200px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .intro-section h2 {
+            font-size: 40px;
+            color: #333;
+        }
+
+        .intro-section p {
+            font-size: 18px;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        /* Library Link */
+        .library-link {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 18px;
+            color: #4CAF50;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .library-link:hover {
+            color: #388E3C;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="home.html">Home</a>
+        <a href="https://aexis-blog.blogspot.com/">Blog</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>🔍</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Link to Library -->
+        <a href="library.html" class="library-link">Go to Library</a>
+
+        <!-- Introduction Section -->
+        <div class="intro-section" id="intro">
+            <h2>Introduction</h2>
+            <p>Welcome to my portfolio! Here, you'll find a collection of my work, including books, projects, research papers, and more. Take a look around and explore!</p>
+        </div>
+
+        <!-- Portfolio Section -->
+        <div class="portfolio" id="portfolio">
+            <!-- Portfolio Item 1 -->
+            <div class="portfolio-item">
+                <img src="1.png" alt="Book 1">
+                <h3>A Monster Among Us Chapter 1</h3>
+                <p>Author: Dhrubak Manna</p>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+
+            <!-- Portfolio Item 2 -->
+            <div class="portfolio-item">
+                <img src="2.png" alt="Book 2">
+                <h3>RAMANUJAN TALE OF A LEGEND</h3>
+                <p>Author: Dhrubak Manna</p>
+                <a href="https://www.bribooks.com/bookstore/ramanujan-tale-of-a-legend" class="btn-buy">Buy Now</a>
+            </div>
+
+            <!-- Portfolio Item 3 -->
+            <div class="portfolio-item">
+                <img src="3.png" alt="Book 3">
+                <h3>Echos of Solitude</h3>
+                <p>Author: Dhrubak Manna</p>
+                <a href="https://www.bribooks.com/bookstore/echos-of-solitude-by-dhrubak-manna" class="btn-buy">Buy Now</a>
+            </div>
+
+            <!-- Portfolio Item 4 -->
+            <div class="portfolio-item">
+                <img src="book4.jpg" alt="Book 4">
+                <h3>Book Title 4</h3>
+                <p>Author: Emily Davis</p>
+                <a href="#" class="btn-buy">Buy Now</a>
+            </div>
+        </div>
+
+        <!-- Research Papers Section -->
+        <div class="research-papers" id="research-papers">
+            <h2>Research Papers 1</h2>
+            <div class="paper">
+                <h3>Research Paper Title 1</h3>
+                <p>This paper is a case study of ev sustainance and automated car charging.</p>
+                <a href="https://drive.google.com/file/d/1x3ImRMpVSlNW7gqGuVrOkZ0avhAMIvuE/view?usp=drive_link" target="_blank" class="btn">View PDF</a>
+
+            </div>
+            <div class="paper">
+                <h3>Research Paper Title 2</h3>
+                <p>Short description of the paper.</p>
+                <a href="path/to/research-paper2.pdf" target="_blank" class="btn">View PDF</a>
+            </div>
+            <div class="paper">
+                <h3>Research Paper Title 3</h3>
+                <p>Short description of the paper.</p>
+                <a href="path/to/research-paper3.pdf" target="_blank" class="btn">View PDF</a>
+            </div>
+            <div class="paper">
+                <h3>Research Paper Title 4</h3>
+                <p>Short description of the paper.</p>
+                <a href="path/to/research-paper4.pdf" target="_blank" class="btn">View PDF</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

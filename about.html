@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aexis - About Us</title>
+    
+    <!-- External Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Embedded CSS -->
+    <style>
+        /* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif important!;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #f9f9f9;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: white;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    padding: 15px 0;
+    width: 100%;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+/* Remove bullets from list */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background: #fff;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.search-bar button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+/* Container */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Section */
+.text-section {
+    max-width: 500px;
+}
+
+.text-section h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #222;
+}
+
+.text-section p {
+    font-size: 16px;
+    margin: 15px 0;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #4CAF50;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #388E3C;
+}
+
+/* Logo Section */
+.logo {
+    width: 150px;  /* Adjust size */
+    height: auto;   /* Keep aspect ratio */
+    display: block; /* Prevents extra spacing issues */
+    margin: 20px auto; /* Centers the logo */
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Aexis</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://aexis-blog.blogspot.com/">Blog</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>&#128269;</button> <!-- Search Icon -->
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <!-- Text Section -->
+            <div class="text-section">
+                <h1>About Us</h1>
+                <p>Welcome to Aexis – a fusion of science, creativity, and innovation. Our platform is a space where scientific research, poetry, and visionary ideas come together to inspire and challenge the boundaries of knowledge.</p>
+                <p>At Aexis, we believe in the power of curiosity and expression. Whether it’s groundbreaking scientific insights, thought-provoking poetry, or creative explorations, we strive to create a hub for those who seek to push limits, question norms, and redefine the future.</p>
+                <p>Join us on this journey of discovery and imagination, where every idea is a step toward something extraordinary.</p>
+                <a href="contact.html" class="btn">Get in Touch</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

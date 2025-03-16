@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Aexis</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background: #f9f9f9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: white;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #333;
+            padding: 15px 0;
+            width: 100%;
+            text-align: left;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        .content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 50px;
+        }
+
+        .content h1 {
+            font-size: 32px;
+            color: #222;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            margin-top: 30px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        form button {
+            margin-top: 15px;
+            padding: 10px;
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #388E3C;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: #333;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #4CAF50;
+        }
+
+        /* Featured Image */
+        .featured-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Aexis</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://aexis-blog.blogspot.com/">Blog</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Contact Us</h1>
+        <p>Feel free to reach out to us via email or social media.</p>
+
+        <form action="mailto:dhrubakesseys2004@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <footer>
+        <a href="https://instagram.com/dhruv_.1508" target="_blank">Instagram</a>
+        <a href="https://twitter.com/dhruv_1508" target="_blank">Twitter</a>
+        <a href="mailto:dhrubakesseys2004@gmail.com">Email</a>
+    </footer>
+</body>
+</html>
